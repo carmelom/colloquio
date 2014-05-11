@@ -3,9 +3,9 @@
 \usepackage{style-custom}
 
 
-\title{Superfluid properties of exciton polariton condensates in planar microcavities}
+\title{Superfluid properties of exciton polariton condensates in panda microcavities}
 \subtitle{Colloquio IV anno}
-\author[Carmelo Mordini]{Carmelo Mordini\\ \vspace{.7cm}{\tiny Supervisors\\ \vspace{-.2cm}I. Carusotto ~ R. Fazio}}
+\author[Carmelo Mordini]{Carmelo Mordini\\ \vspace{.7cm}{\footnotesize Supervisors\\ \vspace{-.2cm}I. Carusotto ~ R. Fazio}}
 
 \institute[SNS] 
 {
@@ -52,7 +52,7 @@
   \begin{columns}
   
   \begin{column}{.6\textwidth}
-    \includegraphics[scale=.2]{files/QW_color.png}
+    \includegraphics[width=\columnwidth]{files/QW_color.png}
   \end{column}
 
   \begin{column}{.4\textwidth}
@@ -66,18 +66,18 @@
   \begin{minipage}{\textwidth}
   \begin{columns}
   
-  \begin{column}{.5\textwidth}
+  \begin{column}{.3\textwidth}
     \begin{itemize}
-     \item Polaritoni
+     \item Effetti macroscopici
      \item Superfluidità
      \item Esperimenti
     \end{itemize}
 
   \end{column}
-
+\hfill
   \begin{column}{.5\textwidth}
   \begin{figure}
-    \includegraphics[scale=.2]{files/Panda.jpg}
+    \includegraphics[width=\columnwidth]{files/QW.jpg}
   \end{figure}
     \end{column}
   \end{columns}
@@ -89,39 +89,33 @@
 
 \begin{frame}{Cavità 2D}%{Optional Subtitle}
 
-    \begin{figure}
-     \fbox{\includegraphics[scale=.7]{files/QW_field.png}}
+  \begin{figure}
+     \fbox{\includegraphics[width=.7\textwidth]{files/QW_field.png}}
     \end{figure}
     
-    \begin{itemize}
-     \item Massa del fotone dipendente dallo stato trasverso eccitato
-    \end{itemize}
-\vspace{-.5cm}        
-      \begin{minipage}{\textwidth}
-      \begin{columns}
-	  \begin{column}{.5\textwidth}
-
-	   \begin{align*}
+    Massa del fotone dipendente dallo stato trasverso eccitato
+    
+    \begin{columns}
+     \begin{column}{.5\textwidth}
+      \begin{align*}
 	\omega_C(k) &= \frac{c}{n_0}\sqrt{{q_z}^2 + k^2} \\ 
-		&\simeq \omega_C^0 + \frac{\hbar k^2}{2m_C}
+		&\simeq \omega_C^0 + \frac{\hbar k^2}{2m_C} &&
 	\end{align*}
-	  \end{column}
-	    
-	  \begin{column}{.5\textwidth}
-	  \footnotesize
-	    $$\begin{cases}
-	      q_z = \frac{\pi M}{\ell_z} \\
-	      m_C = \frac{\hbar n_0 q_z}{c} = \frac{\hbar \omega_C^0}{c^2/n_0^2}
-	    \end{cases}
-	    $$
-	   \end{column}
-      \end{columns}
+     \end{column}
+     
+     \begin{column}{.5\textwidth}
+      \begin{figure}
+       \fbox{
+       \includegraphics[width=.8\columnwidth]{files/Photon_dispersion.png}}
+      \end{figure}
 
-      \end{minipage}
+     \end{column}
 
-  
+
+    \end{columns}
 
     
+	
 \end{frame}
 
  \begin{frame}{Quantum Wells}
@@ -129,7 +123,11 @@
  \begin{figure}
   \includegraphics[scale=.5]{files/QW.jpg}
  \end{figure}
-  $$\omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X}$$
+ 
+ \[
+  \omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X}
+ \]
+
   \end{frame}
 
  
@@ -175,19 +173,24 @@
 
 \begin{minipage}{\textwidth}
 \begin{columns}
+\hskip.4cm
 \footnotesize{
-  \begin{column}{.4\textwidth}
-  
-   $$\begin{cases}
+  \begin{column}{.45\textwidth}
+   \begin{flalign*}
+    \begin{cases}
 	\oa_C = C\lp \ \oa\lp + C\up \ \oa\up \\
 	\oa_X = X\lp \ \oa\lp + X\up \ \oa\up
      \end{cases}
-   $$
-   Coefficienti di Hopfield
+     &&
+   \end{flalign*}
+
+   
+   Coefficienti di Hopfield\\
+   \( C_j (k) \approx X_j (k) \approx 1/2 \quad \text{@low }k\)
 
    \begin{equation*}
     \begin{align}
-      &\omega_{\text{\tiny{$(UP,LP)$}}} (k) = \frac{\omega_C (k) + \omega_X (k)}{2} \\
+      &\displaystyle\omega_{ {\scriptstyle (UP,LP)} } (k) = \frac{\omega_C (k) + \omega_X (k)}{2} \\
 			     &\pm \left[\Omega_R^2 + \left(\frac{\omega_C (k) - \omega_X (k)}{2}\right)^2\right]^{1/2}
     \end{align}
    \end{equation*}
@@ -195,7 +198,7 @@
   
   \end{column}
   }
-  \hspace{.5cm}
+  \hfill
   \begin{column}{.55\textwidth}
    \begin{figure}[h]
     \includegraphics[scale=.2]{files/polariton_dispersion.png}
@@ -280,10 +283,11 @@
      \textbf{Non coerente}\\
      Alto detunig; Rilassamento; Altro...\\
      Fase del modo LP non fissata\\
+     Signal-idler condensate
      \vskip15pt
      \textbf{Coerente}\\
      Fase del condensato fissata dal laser\\
-     si può includere della dinamica
+     si può includere nella dinamica
   
  \end{column}
 \end{columns}
@@ -301,22 +305,46 @@
 
 \begin{frame}{Pompaggio laser}
 
+\vspace{-1cm}
+{\footnotesize
 \begin{columns}
 \hskip10pt
 \begin{column}{.4\textwidth}
       
-\LaTeX~ è stupido\\
-qui devo dire che ci restringiamo al solo LP
-
-  \end{column}
+Se il pump è accordato vicino al fondo della branca LP
+\( \big(|\omega_p - \omega\lp| \ll \omega\up - \omega\lp \big) \)
+la branca superiore è molto poco eccitata.\\
+La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
+\begin{flalign*}
+  &
+    \begin{cases}
+	\opsi\up \approx 0 \\
+	\opsi_C \approx C\lp \ \opsi\lp \\
+	\opsi_X \approx X\lp \ \opsi\lp 
+     \end{cases}
+  \\
+  &\qquad\quad\Downarrow \\
+  &\opsi\lp \approx C^*\lp \ \opsi_C + X^*\lp \ \opsi_X
+   \end{flalign*}
+   \end{column}
   
   \begin{column}{.6\textwidth}
       \begin{figure}
-       \includegraphics[scale=.3]{files/LP_pump.png}
+       \includegraphics[scale=.25]{files/LP_pump.png}
       \end{figure}
   \end{column}   
  
 \end{columns}
+}
+\normalsize
+\begin{align*}
+  \ham = \ \hbar \intr & \opsi^\dagger\lp \ \big[ \omega\lp(-i\nabla) \big]\ \opsi\lp + \frac{g\lp}{2} \opsi\lp^\dagger  \opsi\lp^\dagger  \opsi\lp  \opsi\lp \\
+	&+ \left( i F_p e^{ik_p r -i\omega_p t} \ \opsi\lp^\dagger + \hc \right)
+\end{align*}
+
+
+
+
 
 \end{frame}
 
@@ -344,7 +372,7 @@ dove l'operatore di Lindblad è solo quello radiativo:
 
 \begin{frame}{ddGPE}
 
-\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \psi\lp\]
+\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp\]
 
 %{\centering
 Approx: \begin{flalign*} \begin{cases}
@@ -356,24 +384,25 @@ Approx: \begin{flalign*} \begin{cases}
 
 
  
-
- \[ 
- \boxed{
+% ddGPE
+\ovalbox{
+\begin{minipage}{\textwidth}
+ \[
  i\partial_t \, \psi\lp = \left[ \omega\lp (-i\nabla) + g\lp |\psi\lp|^2 - i \frac{\gamma\lp}{2} \right]\, \psi\lp + i F_p e^{ik_pr - \omega_p t}
- }
-\]
+ \]
+ \vskip0pt
+\end{minipage}
+}
+
+
 
 \begin{flalign*}
  \begin{cases}
-  m\lp = m_C/|C\lp|^2 \qquad &g\lp = |X\lp|^2 g_X + |C\lp|^2 g_C \\
-  \gamma\lp = |C\lp|^2 \gamma_{{\scriptscriptstyle rad}} \qquad &F_p = {C\lp}^*\, \eta E_{inc}
+  m\lp = m_C/|C\lp|^2 \qquad &g\lp = |X\lp|^2 \,g_X + |C\lp|^2 \,g_C \\
+  \gamma\lp = |C\lp|^2 \gamma_{{\scriptscriptstyle rad}} \qquad &F_p = C\lp\, \eta E_{inc}
  \end{cases}
 &&
 \end{flalign*}
-
- 
-
- 
 
 \end{frame}
 
