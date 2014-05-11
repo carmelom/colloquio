@@ -43,51 +43,51 @@
 \section{Cavità di semiconduttori}
 
 \subsection{Dinamica dei polaritoni}
+% 
+%  \begin{frame}{Cavità 2D}{fuffa}
+%  \transwipe[direction=270]
+%  \small
+% 
+% \begin{minipage}{\textwidth}
+%   \begin{columns}
+%   
+%   \begin{column}{.6\textwidth}
+%     \includegraphics[width=\columnwidth]{files/QW_color.png}
+%   \end{column}
+% 
+%   \begin{column}{.4\textwidth}
+%     Le cavità bidimensionali di semiconduttore si rivelano uno strumento potente per studiare la fisica dei fluidi quantistici.
+%     \end{column}
+%   \end{columns}
+%   \end{minipage}
+%   
+%   Il confinamento spaziale e l'interazione con il mezzo fanno acquistare alla luce una dinamica analoga a quella di un fluido di particelle.
+%   
+%   \begin{minipage}{\textwidth}
+%   \begin{columns}
+%   
+%   \begin{column}{.3\textwidth}
+%     \begin{itemize}
+%      \item Interazioni luce-materia
+%      \item Effetti macroscopici
+%      \item Esperimenti
+%     \end{itemize}
+% 
+%   \end{column}
+% \hfill
+%   \begin{column}{.5\textwidth}
+%   \begin{figure}
+%     \includegraphics[width=\columnwidth]{files/QW.jpg}
+%   \end{figure}
+%     \end{column}
+%   \end{columns}
+%   \end{minipage}
+%   
+%   
+%  \end{frame}
 
- \begin{frame}{Cavità 2D}
- \transwipe[direction=270]
- \small
 
-\begin{minipage}{\textwidth}
-  \begin{columns}
-  
-  \begin{column}{.6\textwidth}
-    \includegraphics[width=\columnwidth]{files/QW_color.png}
-  \end{column}
-
-  \begin{column}{.4\textwidth}
-    Le cavità bidimensionali di semiconduttore si rivelano uno strumento potente per studiare la fisica dei fluidi quantistici.
-    \end{column}
-  \end{columns}
-  \end{minipage}
-  
-  Il confinamento spaziale e l'interazione con il mezzo fanno acquistare alla luce una dinamica analoga a quella di un fluido di particelle.
-  
-  \begin{minipage}{\textwidth}
-  \begin{columns}
-  
-  \begin{column}{.3\textwidth}
-    \begin{itemize}
-     \item Effetti macroscopici
-     \item Superfluidità
-     \item Esperimenti
-    \end{itemize}
-
-  \end{column}
-\hfill
-  \begin{column}{.5\textwidth}
-  \begin{figure}
-    \includegraphics[width=\columnwidth]{files/QW.jpg}
-  \end{figure}
-    \end{column}
-  \end{columns}
-  \end{minipage}
-  
-  
- \end{frame}
-
-
-\begin{frame}{Cavità 2D}%{Optional Subtitle}
+\begin{frame}{Cavità 2D}
 
   \begin{figure}
      \fbox{\includegraphics[width=.7\textwidth]{files/QW_field.png}}
@@ -103,10 +103,10 @@
 	\end{align*}
      \end{column}
      
-     \begin{column}{.5\textwidth}
+     \begin{column}{.6\textwidth}
       \begin{figure}
        \fbox{
-       \includegraphics[width=.8\columnwidth]{files/Photon_dispersion.png}}
+       \includegraphics[width=.7\columnwidth]{files/Photon_dispersion.pdf}}
       \end{figure}
 
      \end{column}
@@ -119,15 +119,22 @@
 \end{frame}
 
  \begin{frame}{Quantum Wells}
- Questa slide fa schifo
+
+ Buche/elettroni confinati lungo z \( \longrightarrow \) Eccitoni\\
+ \vspace{10pt}
+ Si comportano come bosoni\\
+ Interagiscono con il campo laser nella cavità
+
+ \begin{flalign*}
+ \qquad &\omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X} \\
+  &V_{dip} \propto \vec d_X \cdot \vec E_{cav}
+  &&
+ \end{flalign*}
+ 
  \begin{figure}
-  \includegraphics[scale=.5]{files/QW.jpg}
+  \includegraphics[width=\textwidth]{files/QW.jpg}
  \end{figure}
  
- \[
-  \omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X}
- \]
-
   \end{frame}
 
  
@@ -281,9 +288,9 @@
   {.55\textwidth}
 
      \textbf{Non coerente}\\
-     Alto detunig; Rilassamento; Altro...\\
+    % Alto detunig; Rilassamento; Altro...\\
      Fase del modo LP non fissata\\
-     Signal-idler condensate
+    % Signal-idler condensate
      \vskip15pt
      \textbf{Coerente}\\
      Fase del condensato fissata dal laser\\
@@ -342,19 +349,16 @@ La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
 	&+ \left( i F_p e^{ik_p r -i\omega_p t} \ \opsi\lp^\dagger + \hc \right)
 \end{align*}
 
-
-
-
-
 \end{frame}
 
 
 \begin{frame}{Dissipazione}
-MASTER EQUATION \alert{SUPER POWWA}!!!111!!!ONE11!
+MASTER EQUATION!!!! \alert{SUPER POWWA}!!!111!!!ONE11!
+{\Large
 \begin{equation*}
-i\hbar \partial_t\rho = [H,\rho] + i\hbar \lind \rho
+i\hbar \partial_t\ \rho = [H,\rho] + i\hbar \lind \rho
 \end{equation*}
-
+}
 dove l'operatore di Lindblad è solo quello radiativo:
 \begin{equation*}
 \lind \rho = \intk \frac{\gamma_{{\scriptscriptstyle rad}}}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right )
@@ -371,19 +375,20 @@ dove l'operatore di Lindblad è solo quello radiativo:
 \section{Teoria di campo medio}
 
 \begin{frame}{ddGPE}
-
-\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp\]
+Riga senza senso
+\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp
+\]
 
 %{\centering
-Approx: \begin{flalign*} \begin{cases}
+Approx: \begin{flalign*} 
+	    \begin{cases}
 	     \left< \opsi^\dagger \opsi\, \opsi \right> \approx |\psi|^2 \psi \\
 	     \omega\lp (k) \approx {\omega\lp}^0 + \displaystyle\frac{\hbar k^2}{2m\lp} \\
            \end{cases}
            &&
-           \end{flalign*}
+         \end{flalign*}
 
 
- 
 % ddGPE
 \ovalbox{
 \begin{minipage}{\textwidth}
@@ -394,41 +399,75 @@ Approx: \begin{flalign*} \begin{cases}
 \end{minipage}
 }
 
-
-
 \begin{flalign*}
  \begin{cases}
   m\lp = m_C/|C\lp|^2 \qquad &g\lp = |X\lp|^2 \,g_X + |C\lp|^2 \,g_C \\
   \gamma\lp = |C\lp|^2 \gamma_{{\scriptscriptstyle rad}} \qquad &F_p = C\lp\, \eta E_{inc}
  \end{cases}
-&&
+ &&
 \end{flalign*}
 
 \end{frame}
 
 \subsection{Stato stazionario}
 
-\begin{frame}{Roba}
+\begin{frame}{Stato stazionario}
 %\input{pandabear.tex}
+Soluzione stazionaria: \( \psi\lp(r,t) = \psi\sts \ e^{ik_pr - \omega_p t}  \leftarrow\) \alert{phase locking}
+
+\[
+ \left( \omega_p - \omega\lp (k_p) - g\lp |\psi\sts|^2 + i \frac{\gamma\lp}{2} \right)\, \psi\sts = i F_p
+\]
+
+
+
+\begin{figure}
+ 
+\end{figure}
+
+La stabilità delle soluzioni si valuta linearizzando, e dipende dall'intensità del laser di pump e dal detuning \(\Delta \omega = \omega_p - \omega\lp(k_p)\):
+% \begin{figure}
+%  \includegraphics[width=\textwidth]{files/Shapevspump-and-Spectra.png}
+% \end{figure}
+\begin{columns}[t]
+ \begin{column}{.5\textwidth}
+  \begin{figure}
+   \includegraphics[width=\columnwidth]{files/Shapevspump.png}
+   \smallcaption{\(\Delta\omega <0\) (top) vs \(\Delta\omega >0\) (bottom)}
+  \end{figure}
+
+ \end{column}
+
+ \begin{column}{.5\textwidth}
+  \begin{figure}
+   \includegraphics[width=\columnwidth]{files/Spectra.png}
+   \smallcaption{Spettro di Bogoliubov nei due casi}
+  \end{figure}
+ \end{column}
+
+\end{columns}
 
 
 \end{frame}
 
-
-\begin{frame}{Blocks}
-\begin{block}{Block Title}
-You can also highlight sections of your presentation in a block, with it's own title
-\end{block}
-\begin{theorem}
-There are separate environments for theorems, examples, definitions and proofs.
-\end{theorem}
-\begin{example}
-Here is an example of an example block.
-\end{example}
-\end{frame}
+% \begin{frame}{Blocks}
+% \begin{block}{Block Title}
+% You can also highlight sections of your presentation in a block, with it's own title
+% \end{block}
+% \begin{theorem}
+% There are separate environments for theorems, examples, definitions and proofs.
+% \end{theorem}
+% \begin{example}
+% Here is an example of an example block.
+% \end{example}
+% \end{frame}
 
 \subsection{Spettro delle eccitazioni}
-\begin{frame}{Altra roba}
+\begin{frame}{Spettro delle eccitazioni}
+Soluzione stazionaria: \( \psi\lp(r,t) = \left(\psi\sts + \delta\psi (r,t) \right)e^{ik_pr - \omega_p t} \)
+
+MATRICIOZZO DI BOGOLIUBOV \alert{POWWA ANCHE LUI!!!}\\
+ma lo faccio domani
 \end{frame}
 
 

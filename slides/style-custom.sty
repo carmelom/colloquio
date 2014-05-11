@@ -9,6 +9,7 @@
 \usepackage{tikz}
 \usepackage{fancybox}
 \usepackage{subfig}
+\usepackage{caption}
 
 \setbeamercovered{transparent}
 
@@ -83,6 +84,9 @@
 \newcommand{\lp}{{\scriptstyle _{LP}}}
 \newcommand{\up}{{\scriptstyle _{UP}}}
 \newcommand{\hc}{\text{{\fontfamily{lmr}\selectfont H.c.}}}
+\newcommand{\sts}{{\scriptstyle ^{ss}_{LP}}}
 \DeclareMathOperator{\tr}{Tr}
-\newcommand{\trcurl}[1]{\tr \left\{ #1 \right \}}
+\newcommand{\trcurl}[1]{\tr \left[ #1 \right]}
 \newcommand{\lind}[1]{\mathcal{L}[#1]}
+
+\newcommand{\smallcaption}[1]{\caption*{{\scriptsize #1}}}
