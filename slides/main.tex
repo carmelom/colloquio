@@ -329,12 +329,12 @@ i\hbar \partial_t\rho = [H,\rho] + i\hbar \lind \rho
 
 dove l'operatore di Lindblad è solo quello radiativo:
 \begin{equation*}
-\lind \rho = \intk \frac{\gamma}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right )
+\lind \rho = \intk \frac{\gamma_{{\scriptscriptstyle rad}}}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right )
 \end{equation*}
 
 \begin{figure}
        \includegraphics[scale=.3]{files/Panda.jpg}
-       \caption{Qui ci rimetto il panda, che almeno lui mi fa compagnia}
+       \caption{\footnotesize Qui ci rimetto il panda, che almeno lui mi fa compagnia}
       \end{figure}
  
 \end{frame}
@@ -344,7 +344,37 @@ dove l'operatore di Lindblad è solo quello radiativo:
 
 \begin{frame}{ddGPE}
 
-$$i\hbar \partial_t \trcurl{\rho \opsi\lp}$$
+\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \psi\lp\]
+
+%{\centering
+Approx: \begin{flalign*} \begin{cases}
+	     \left< \opsi^\dagger \opsi\, \opsi \right> \approx |\psi|^2 \psi \\
+	     \omega\lp (k) \approx {\omega\lp}^0 + \displaystyle\frac{\hbar k^2}{2m\lp} \\
+           \end{cases}
+           &&
+           \end{flalign*}
+
+
+ 
+
+ \[ 
+ \boxed{
+ i\partial_t \, \psi\lp = \left[ \omega\lp (-i\nabla) + g\lp |\psi\lp|^2 - i \frac{\gamma\lp}{2} \right]\, \psi\lp + i F_p e^{ik_pr - \omega_p t}
+ }
+\]
+
+\begin{flalign*}
+ \begin{cases}
+  m\lp = m_C/|C\lp|^2 \qquad &g\lp = |X\lp|^2 g_X + |C\lp|^2 g_C \\
+  \gamma\lp = |C\lp|^2 \gamma_{{\scriptscriptstyle rad}} \qquad &F_p = {C\lp}^*\, \eta E_{inc}
+ \end{cases}
+&&
+\end{flalign*}
+
+ 
+
+ 
+
 \end{frame}
 
 \subsection{Stato stazionario}

@@ -1,3 +1,3 @@
-massive-octo-avenger-colloquium
+Colloquio SNS 4anno
 ===============================
-##Nome suggerito da Git
+##Superfluid properties of exciton polariton condensates in planar microcavities
