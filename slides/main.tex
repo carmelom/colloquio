@@ -1,0 +1,445 @@
+\documentclass[10pt]{beamer}
+
+\usepackage{style-custom}
+
+
+\title{Superfluid properties of exciton polariton condensates in planar microcavities}
+\subtitle{Colloquio IV anno}
+\author[Carmelo Mordini]{Carmelo Mordini\\ \vspace{.7cm}{\tiny Supervisors\\ \vspace{-.2cm}I. Carusotto ~ R. Fazio}}
+
+\institute[SNS] 
+{
+  Scuola Normale Superiore\\
+  %University of Somewhere
+  }
+\date{Maggio 2014}
+
+
+% % Delete this, if you do not want the table of contents to pop up at
+% % the beginning of each subsection:
+% \AtBeginSubsection[]
+% {
+%   \begin{frame}<beamer>{Riassunto}
+%     \tableofcontents[currentsection,currentsubsection]
+%   \end{frame}
+% }
+
+% Let's get started
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents[pausesections]
+  % You might wish to add the option [pausesections]
+\end{frame}
+
+% Section and subsections will appear in the presentation overview
+% and table of contents.
+\section{Cavità di semiconduttori}
+
+\subsection{Dinamica dei polaritoni}
+
+ \begin{frame}{Cavità 2D}
+ \transwipe[direction=270]
+ \small
+
+\begin{minipage}{\textwidth}
+  \begin{columns}
+  
+  \begin{column}{.6\textwidth}
+    \includegraphics[scale=.2]{files/QW_color.png}
+  \end{column}
+
+  \begin{column}{.4\textwidth}
+    Le cavità bidimensionali di semiconduttore si rivelano uno strumento potente per studiare la fisica dei fluidi quantistici.
+    \end{column}
+  \end{columns}
+  \end{minipage}
+  
+  Il confinamento spaziale e l'interazione con il mezzo fanno acquistare alla luce una dinamica analoga a quella di un fluido di particelle.
+  
+  \begin{minipage}{\textwidth}
+  \begin{columns}
+  
+  \begin{column}{.5\textwidth}
+    \begin{itemize}
+     \item Polaritoni
+     \item Superfluidità
+     \item Esperimenti
+    \end{itemize}
+
+  \end{column}
+
+  \begin{column}{.5\textwidth}
+  \begin{figure}
+    \includegraphics[scale=.2]{files/Panda.jpg}
+  \end{figure}
+    \end{column}
+  \end{columns}
+  \end{minipage}
+  
+  
+ \end{frame}
+
+
+\begin{frame}{Cavità 2D}%{Optional Subtitle}
+
+    \begin{figure}
+     \fbox{\includegraphics[scale=.7]{files/QW_field.png}}
+    \end{figure}
+    
+    \begin{itemize}
+     \item Massa del fotone dipendente dallo stato trasverso eccitato
+    \end{itemize}
+\vspace{-.5cm}        
+      \begin{minipage}{\textwidth}
+      \begin{columns}
+	  \begin{column}{.5\textwidth}
+
+	   \begin{align*}
+	\omega_C(k) &= \frac{c}{n_0}\sqrt{{q_z}^2 + k^2} \\ 
+		&\simeq \omega_C^0 + \frac{\hbar k^2}{2m_C}
+	\end{align*}
+	  \end{column}
+	    
+	  \begin{column}{.5\textwidth}
+	  \footnotesize
+	    $$\begin{cases}
+	      q_z = \frac{\pi M}{\ell_z} \\
+	      m_C = \frac{\hbar n_0 q_z}{c} = \frac{\hbar \omega_C^0}{c^2/n_0^2}
+	    \end{cases}
+	    $$
+	   \end{column}
+      \end{columns}
+
+      \end{minipage}
+
+  
+
+    
+\end{frame}
+
+ \begin{frame}{Quantum Wells}
+ Questa slide fa schifo
+ \begin{figure}
+  \includegraphics[scale=.5]{files/QW.jpg}
+ \end{figure}
+  $$\omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X}$$
+  \end{frame}
+
+ 
+
+\begin{frame}{Dinamica}
+
+
+  Gradi di libertà sul piano $xy$
+  \begin{itemize}[<+->]
+  
+  \item { fotoni
+   \begin{flalign*}
+   \ham_{cav} = \intk \hbar \omega_C (k) \ \oa_C^\dagger \oa_C  &&
+  \end{flalign*}
+  }
+  
+    \item { eccitoni, con interaz. di dipolo (RWA)
+ \begin{flalign*} 
+    \ham_{exc} = \intk \hbar \omega_X (k) \ \oa_X^\dagger  \oa_X ~ + ~\hbar \Omega_R \left(\oa_C^\dagger \oa_X + \oa_X^\dagger \oa_C\right) &&
+ \end{flalign*}
+   }
+  \end{itemize}
+  
+  \onslide<\thebeamerpauses>{
+  \transdissolve<\thebeamerpauses>
+ \begin{equation*}
+  \boxed{
+   \ham_{free} = \hbar \displaystyle \intk 
+      \begin{pmatrix} \oa_C^\dagger & \oa_X^\dagger \end{pmatrix}\,
+      \begin{pmatrix} \omega_C & \Omega_R \\ \Omega_R & \omega_X \end{pmatrix}\,\begin{pmatrix}\oa_C \\ \oa_X \end{pmatrix}
+      }
+  \end{equation*}
+  }
+\end{frame}
+
+\begin{frame}{Polaritoni liberi}
+
+\begin{equation*}
+%\begin{align}
+ \ham_{free} = \hbar \intk \omega_{LP} (k) \oa_{LP}^\dagger \oa_{LP} ~ + ~ \omega_{UP} (k) \oa_{UP}^\dagger \oa_{UP}
+%\end{align}
+\end{equation*}
+
+\begin{minipage}{\textwidth}
+\begin{columns}
+\footnotesize{
+  \begin{column}{.4\textwidth}
+  
+   $$\begin{cases}
+	\oa_C = C\lp \ \oa\lp + C\up \ \oa\up \\
+	\oa_X = X\lp \ \oa\lp + X\up \ \oa\up
+     \end{cases}
+   $$
+   Coefficienti di Hopfield
+
+   \begin{equation*}
+    \begin{align}
+      &\omega_{\text{\tiny{$(UP,LP)$}}} (k) = \frac{\omega_C (k) + \omega_X (k)}{2} \\
+			     &\pm \left[\Omega_R^2 + \left(\frac{\omega_C (k) - \omega_X (k)}{2}\right)^2\right]^{1/2}
+    \end{align}
+   \end{equation*}
+   Dispersione
+  
+  \end{column}
+  }
+  \hspace{.5cm}
+  \begin{column}{.55\textwidth}
+   \begin{figure}[h]
+    \includegraphics[scale=.2]{files/polariton_dispersion.png}
+   \end{figure}
+
+  \end{column}
+\end{columns}
+\end{minipage}
+
+\end{frame}
+
+
+
+\subsection{Interazioni}
+
+% You can reveal the parts of a slide one at a time
+% with the \pause command:
+\begin{frame}{Interazioni}
+  %\transwipe[direction=270]
+  Di carattere fotonico ed elettronico\\
+  \footnotesize
+  (le ultime sono dominanti)
+  \normalsize
+  \vskip.5cm
+  \begin{itemize}
+   \item {
+   Nonlinearità ottiche
+	  \begin{flalign*}
+	   \chi^{(3)}{\vec E_{cav}}^4 \propto \chi^{(3)}(\oa_C^\dagger + \oa_C)^4 &&
+	  \end{flalign*}
+   }
+   \item{
+   Scattering coulombiano tra eccitoni
+	    \begin{flalign*}
+	     \text{\large{$\tilde V$}} (k,k',q) \ \oa_X^\dagger (k+q) \oa_X^\dagger (k'-q) \oa_X (k') \oa_X (k) &&
+	    \end{flalign*}
+   }
+  \end{itemize}
+
+  \pause
+	    
+\begin{columns}
+ \begin{column}
+  {.8\textwidth}
+  \begin{equation*}
+    \boxed{
+      \ham_{int} = \intr \sum_{j=X,C} \frac{\hbar g_j}{2} \ \opsi_j^\dagger (r) \opsi_j^\dagger (r) \opsi_j (r) \opsi_j (r)
+        }
+   \end{equation*}
+ \end{column}
+ 
+ \begin{column}
+  {.2\textwidth}
+  \begin{itemize}
+   \item $ka \ll 1$
+   \item RWA
+  \end{itemize}
+
+ \end{column}
+
+
+\end{columns}
+
+\end{frame}
+
+\subsection{Pumping \& losses}
+
+\begin{frame}{Pompaggio laser}
+  \begin{columns}
+ \begin{column}
+  {.45\textwidth}
+    \begin{figure}[t]
+    \flushleft
+     \includegraphics[scale=.18]{files/incoherent.png}
+    \end{figure}
+
+ \end{column}
+ 
+ \begin{column}
+  {.55\textwidth}
+
+     \textbf{Non coerente}\\
+     Alto detunig; Rilassamento; Altro...\\
+     Fase del modo LP non fissata\\
+     \vskip15pt
+     \textbf{Coerente}\\
+     Fase del condensato fissata dal laser\\
+     si può includere della dinamica
+  
+ \end{column}
+\end{columns}
+
+ \begin{equation*}
+ \boxed{
+    \begin{align*}
+       \ham_{pump} &=\intr i\hbar \ \eta E_{inc} \ e^{ik_p r -i\omega_p t} \ \opsi_C^\dagger (r) +\hc \\
+	&= \quad i\hbar \ \eta E_{inc} \ e^{-i\omega_p t} \ \oa_C^\dagger (k_p) +\hc
+    \end{align*}
+    }
+ \end{equation*}
+\end{frame}
+
+
+\begin{frame}{Pompaggio laser}
+
+\begin{columns}
+\hskip10pt
+\begin{column}{.4\textwidth}
+      
+\LaTeX~ è stupido\\
+qui devo dire che ci restringiamo al solo LP
+
+  \end{column}
+  
+  \begin{column}{.6\textwidth}
+      \begin{figure}
+       \includegraphics[scale=.3]{files/LP_pump.png}
+      \end{figure}
+  \end{column}   
+ 
+\end{columns}
+
+\end{frame}
+
+
+\begin{frame}{Dissipazione}
+MASTER EQUATION \alert{SUPER POWWA}!!!111!!!ONE11!
+\begin{equation*}
+i\hbar \partial_t\rho = [H,\rho] + i\hbar \lind \rho
+\end{equation*}
+
+dove l'operatore di Lindblad è solo quello radiativo:
+\begin{equation*}
+\lind \rho = \intk \frac{\gamma}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right )
+\end{equation*}
+
+\begin{figure}
+       \includegraphics[scale=.3]{files/Panda.jpg}
+       \caption{Qui ci rimetto il panda, che almeno lui mi fa compagnia}
+      \end{figure}
+ 
+\end{frame}
+
+
+\section{Teoria di campo medio}
+
+\begin{frame}{ddGPE}
+
+$$i\hbar \partial_t \trcurl{\rho \opsi\lp}$$
+\end{frame}
+
+\subsection{Stato stazionario}
+
+\begin{frame}{Roba}
+%\input{pandabear.tex}
+
+
+\end{frame}
+
+
+\begin{frame}{Blocks}
+\begin{block}{Block Title}
+You can also highlight sections of your presentation in a block, with it's own title
+\end{block}
+\begin{theorem}
+There are separate environments for theorems, examples, definitions and proofs.
+\end{theorem}
+\begin{example}
+Here is an example of an example block.
+\end{example}
+\end{frame}
+
+\subsection{Spettro delle eccitazioni}
+\begin{frame}{Altra roba}
+\end{frame}
+
+
+\section{Superfluidità}
+\begin{frame}{Slide con foto fighe}
+ 
+\end{frame}
+
+\subsection{Resonant Raileigh Scattering}
+\subsection{Criterio di Landau}
+\subsection{Verifica sperimentale}
+
+% Placing a * after \section means it will not show in the
+% outline or table of contents.
+\section*{Summary}
+
+\begin{frame}{Summary}
+  \begin{itemize}
+  \item
+    Colloquio \alert{superfigo}.
+  \item
+    \alert{Fazio in vacanza} senza di noi.
+  \item
+    Perhaps a \alert{third message}, but not more than that.
+  \end{itemize}
+  
+  \begin{itemize}
+  \item
+    Outlook
+    \begin{itemize}
+    \item
+      Something you haven't solved.
+    \item
+      Something else you haven't solved.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+
+% All of the following is optional and typically not needed. 
+\appendix
+\section<presentation>*{\appendixname}
+\subsection<presentation>*{For Further Reading}
+
+\begin{frame}[allowframebreaks]
+  \frametitle<presentation>{For Further Reading}
+    
+  \begin{thebibliography}{10}
+    
+  \beamertemplatebookbibitems
+  % Start with overview books.
+
+  \bibitem{Author1990}
+    A.~Author.
+    \newblock {\em Handbook of Everything}.
+    \newblock Some Press, 1990.
+
+    
+  \beamertemplatearticlebibitems
+  % Followed by interesting articles. Keep the list short. 
+
+  \bibitem{Someone2000}
+    S.~Someone.
+    \newblock On this and that.
+    \newblock {\em Journal of This and That}, 2(1):50--100,
+    2000.
+  \end{thebibliography}
+\end{frame}
+
+\end{document}
+
+

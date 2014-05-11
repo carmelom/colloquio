@@ -1,0 +1,88 @@
+\ProvidesPackage{style-custom}
+
+\usepackage[utf8]{inputenc}
+\usepackage[italian,english]{babel}
+\usepackage{amssymb, amsmath}
+\usepackage{wrapfig}
+\usepackage{bigints}
+\usefonttheme[onlymath]{serif}
+\usepackage{tikz}
+\usepackage{fancybox}
+\usepackage{subfig}
+
+\setbeamercovered{transparent}
+
+%\usepackage{extsizes}
+% There are many different themes available for Beamer. A comprehensive
+% list with examples is given here:
+% http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
+% You can uncomment the themes below if you would like to use a different
+% one:
+%\usetheme{AnnArbor}
+%\usetheme{Antibes}
+%\usetheme{Bergen}
+%\usetheme{Berkeley}
+%\usetheme{Berlin}
+%\usetheme{Boadilla}
+%\usetheme{boxes}
+%\usetheme{CambridgeUS}
+%\usetheme{Copenhagen}
+%\usetheme{Darmstadt}
+%\usetheme{default}
+%\usetheme{Frankfurt}
+\usetheme{Goettingen}
+%\usetheme{Hannover}
+%\usetheme{Ilmenau}
+%\usetheme{JuanLesPins}
+%\usetheme{Luebeck}
+%\usetheme{Madrid}
+%\usetheme{Malmoe}
+%\usetheme{Marburg}
+%\usetheme{Montpellier}
+%\usetheme{PaloAlto}
+%\usetheme{Pittsburgh}
+%\usetheme{Rochester}
+%\usetheme{Singapore}
+%\usetheme{Szeged}
+%\usetheme{Warsaw}
+
+%\usecolortheme{crane}
+%\usepackage{beamerthemesidebar}
+
+
+%%background
+\ifnum\thepage=1{
+
+\pgfdeclareimage[width=\paperwidth]{bakimg}{files/Panda.jpg}
+\setbeamertemplate{background}
+{
+	\begin{tikzpicture}
+	
+	\ifnum \thepage=1
+		{
+		\useasboundingbox (0,0) rectangle (\the\paperwidth, \the\paperheight) ; 
+		%\pgftext[at=\pgfpoint{\the\paperwidth/10}{.5cm},left,base]{\pgfuseimage{bakimg}} ; 
+		\pgftext[at=\pgfpoint{0}{0},left,base]{\pgfuseimage{bakimg}} ; 
+		
+			\fill[white, opacity=0.6] (0,0)--(\the\paperwidth,0)--(\the\paperwidth, \the\paperheight)--(0, \the\paperheight)--(0,0);
+         }
+      \fi
+	\end{tikzpicture}
+
+}
+
+
+%%definitions
+\newcommand{\ham}{\mathcal{H}}
+\newcommand{\intk}{ \bigintsss \!\!\! \text{\small{$\frac{d^2 k}{(2\pi)^2}$}}~}
+\newcommand{\intr}{ \bigintsss \!\!\! \text{\small{$d^2 r$}}~}
+%\newcommand{\intk}{ \displaystyle \int \!\!\! \text{\footnotesize{$\frac{d^2 k}{(2\pi)^2}$}}~}
+\newcommand{\oa}{\hat{a}}
+\newcommand{\opsi}{\hat{\psi}}
+\newcommand{\bvec}[1]{\boldsymbol{#1}}
+\newcommand{\lp}{_{LP}}
+\newcommand{\up}{_{UP}}
+\newcommand{\hc}{\text{{\fontfamily{lmr}\selectfont h.c.}}}
+\DeclareMathOperator{\tr}{Tr}
+\newcommand{\trcurl}[1]{\tr \left\{ #1 \right \}}
+\newcommand{\lind}[1]{\mathcal{L}[#1]}

@@ -1,0 +1,98 @@
+\documentclass[mathserif]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+
+\title{ddGPE}
+\author{Carmelo Mordini}
+%\date{May 2014}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage[fleqn]{amsmath}
+\usepackage{amssymb}
+\usepackage{mathtools}
+\usepackage{cancel}
+
+\DeclareMathOperator{\tr}{Tr}
+\newcommand{\trcurl}[1]{\tr \left\{ #1 \right \}}
+\newcommand{\lind}[1]{\mathcal{L}[#1]}
+\newcommand{\daglind}[1]{\mathcal{L}^\dagger[#1]}
+\newcommand{\intk}{\int\frac{d^2 k}{(2\pi)^2}\; }
+\newcommand{\dert}{i\hbar\partial_t}
+%\setlength{mathindent}{0pt}
+
+\begin{document}
+
+\maketitle
+
+
+    Devo dire di non aver ancora letto il paper da lei indicato sulla ddGPE e gli altri approcci (quantum Langevin \& co.). Ho provato a fare due conti con la Master equation e il risultato mi sembra convincente, glieli riporto qui perché via mail sarebbe tutto illeggibile!
+
+Partiamo dall'hamiltoniana modello$ \quad H = H_{free} + H_{xx} + H_{pump} $ e dalla master eq. per un non meglio specificato stato $\rho$ del sistema:
+\begin{equation*}
+i\hbar \partial_t\rho = [H,\rho] + i\hbar \lind \rho
+\end{equation*}
+
+dove l'operatore di Lindblad è solo quello radiativo:
+\begin{equation*}
+\lind \rho = \intk \frac{\gamma}{2} \left ( 2a_c\rho a_c^\dagger - a_c^\dagger a_c \rho - \rho a_c^\dagger a_c \right )
+\end{equation*}
+
+In tutto questo $\gamma(k)$ lo prendo costante, immagino che il discorso si generalizzi facilmente.\\
+Visto che l'equazione mean field vorrebbe essere l'evoluzione del valor medio $<\psi_c> = \tr[\psi_c \rho]$ (e lo stesso per gli eccitoni con $\psi_x$) ho iniziato a calcolare (ci metto un operatore generico)
+\begin{equation*}
+i\hbar \partial_t \tr[\rho(t) \theta] = \tr \big\{ [H,\rho]\theta + i\hbar\lind \rho \theta \big \} 
+%= \tr \big\{ H\rho\theta -\rho H \theta + i\hbar \lind \rho \theta \big \}
+\end{equation*}
+
+Ciclando in modo opportuno i vari pezzi della traccia,
+\begin{align*}
+\trcurl{[H,\rho]\ \theta} &= \tr \left\{ H\rho\theta -\rho H           \theta \right \} \\ 
+    &= \tr \left\{ \rho \theta H  \right \} - \trcurl{\rho H \theta  } \\ 
+    &= \trcurl{\rho \ [\theta,H]}
+\end{align*}
+\begin{align*}
+\trcurl{\lind \rho \ \theta} 
+    &= \intk \frac{\gamma}{2} \left ( 2\tr[a_c\rho a_c^\dagger         \ \theta] - \tr[ a_c^\dagger a_c \rho \ \theta] -\tr[          \rho a_c^\dagger a_c\ \theta] \right ) \\
+    &= \intk \frac{\gamma}{2} \left ( 2\tr[\rho a_c^\dagger \theta a_c] - \tr[ \rho \ \theta a_c^\dagger a_c ] -\tr[          \rho a_c^\dagger a_c\ \theta] \right ) \\
+    &= \trcurl{\rho \ \intk \frac{\gamma}{2} \left ( 2a_c^\dagger \theta a_c - \theta a_c^\dagger a_c - a_c^\dagger a_c \theta  \right )} \\
+    &\coloneqq \trcurl{\rho \ \mathcal{L}^\dagger [\theta]}
+\end{align*}
+
+Il primo pezzo è esattamente il valore medio dell'equazione di Heisemberg per l'operatore $\theta$; il secondo non so bene che interpretazione abbia, dato che la master equation l'ho vista solo nell'evoluzione degli stati... io lo vedrei come il solito termine di dissipazione solo che stavolta sto scrivendo l'evoluzione temporale in rappresentazione di Heisemberg.
+
+A questo punto al posto di $\theta$ ci metto i campi di fotoni ed eccitoni, ed ho le due equazioni GP che mi servono: la parte \lq\lq di Heisemberg" (commutatore con $H$) mi fa la cosa giusta per le X e per le C, nelle quali fa comparire anche $i\hbar F_p = [\psi_c,H_{pump}]$. La cosa bella è che mi esce pulito pulito il termine di dissipazione: \\
+sul campo degli eccitoni $\daglind{\psi_x} = 0$ perché commutano tutti; per i fotoni, basta usare le regole di commutazione per sviluppare i termini
+\begin{equation*}
+\begin{cases}
+\left[ \psi_c(r), a_c(k) \right] = 0 \\
+\left[ \psi_c(r),a_c^\dagger(k)\right]= e^{ikr}
+\end{cases}
+\end{equation*}
+
+\begin{align*}
+\daglind{\psi_c} &= \intk \frac{\gamma}{2} \left ( 2a_c^\dagger \underline{\psi_c a_c} - \psi_c a_c^\dagger a_c - a_c^\dagger a_c \psi_c  \right )\\
+    &= \intk \frac{\gamma}{2} \left ( \cancel{2}a_c^\dagger a_c \psi_c - \psi_c a_c^\dagger a_c - \cancel{a_c^\dagger a_c \psi_c}  \right )\\
+    &= \intk \frac{\gamma}{2} \left [ a_c^\dagger a_c , \psi_c \right ]\\
+    &=\intk \frac{\gamma}{2} a_c^\dagger \cancel{ \left [a_c \psi_c \right ]} + \left [ a_c^\dagger, \psi_c \right] a_c\\
+    &= - \frac{\gamma}{2} \intk e^{ikr} a_c(k) \\
+    &= - \frac{\gamma}{2}\ \psi_c
+\end{align*}
+
+Ci sono sia il segno meno (ed è importante che ci sia!) sia la $i$ al posto giusto. Bingo.
+
+Domanda bonus: nonostante $H_{pump}$ contenga una $i$ dove serve, e quindi mi faccia da sorgente nell'equazione di $\psi_c$, è hermitiano e quindi lo posso chiamare a buon diritto \lq \lq hamiltoniana di pompaggio". Ho notato che il termine dissipativo lo otterrei anche infilando nell'hamiltoniana
+\begin{equation*}
+\tilde H = -i\hbar \int d^2r \; \frac{\gamma}{2}\ \psi_c^\dagger \psi_c
+\end{equation*}
+\begin{equation*}
+\left[ \psi_c, \tilde H \right ] = -i\hbar\frac{\gamma}{2}\ \psi_c
+\end{equation*}
+
+Si vede bene che $\tilde H$ è anzi \emph{antihermitiana}. Non ha molto senso avere un generatore di evoluzione temporale che non sia hermitiano, ma fa tornare le cose e mi chiedevo il perchè...
+
+
+Grazie mille per le spiegazioni!
+
+\textit{Carmelo}
+\end{document}
