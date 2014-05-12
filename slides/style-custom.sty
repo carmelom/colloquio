@@ -14,10 +14,12 @@
 \setbeamercovered{transparent}
 
 %\usepackage{extsizes}
-% There are many different themes available for Beamer. A comprehensive
+% There are many different themes available for Beamer. A
+comprehensive
 % list with examples is given here:
 % http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
-% You can uncomment the themes below if you would like to use a different
+% You can uncomment the themes below if you would like to use
+a different
 % one:
 %\usetheme{AnnArbor}
 %\usetheme{Antibes}
@@ -57,34 +59,44 @@
 \pgfdeclareimage[width=\paperwidth]{bakimg}{files/Panda.jpg}
 \setbeamertemplate{background}
 {
-	\begin{tikzpicture}
-	
-	\ifnum \thepage=1
-		{
-		\useasboundingbox (0,0) rectangle (\the\paperwidth, \the\paperheight) ; 
-		%\pgftext[at=\pgfpoint{\the\paperwidth/10}{.5cm},left,base]{\pgfuseimage{bakimg}} ; 
-		\pgftext[at=\pgfpoint{0}{0},left,base]{\pgfuseimage{bakimg}} ; 
-		
-			\fill[white, opacity=0.6] (0,0)--(\the\paperwidth,0)--(\the\paperwidth, \the\paperheight)--(0, \the\paperheight)--(0,0);
+        \begin{tikzpicture}
+        
+        \ifnum \thepage=1
+                {
+                \useasboundingbox (0,0) rectangle (\the\paperwidth,
+\the\paperheight) ;
+                %\pgftext[at=\pgfpoint{\the\paperwidth/10}{.5cm},left,base]{\pgfuseimage{bakimg}}
+;
+                \pgftext[at=\pgfpoint{0}{0},left,base]{\pgfuseimage{bakimg}}
+;
+                
+                        \fill[white, opacity=0.6]
+(0,0)--(\the\paperwidth,0)--(\the\paperwidth,
+\the\paperheight)--(0, \the\paperheight)--(0,0);
          }
       \fi
-	\end{tikzpicture}
+        \end{tikzpicture}
 
 }
 
 
 %%definitions
 \newcommand{\ham}{\mathcal{H}}
-\newcommand{\intk}{ \bigintsss \!\!\! \text{\small{$\frac{d^2 k}{(2\pi)^2}$}}~}
+\newcommand{\intk}{ \bigintsss \!\!\! \text{\small{$\frac{d^2
+k}{(2\pi)^2}$}}~}
 \newcommand{\intr}{ \bigintsss \!\!\! \text{\small{$d^2 r$}}~}
-%\newcommand{\intk}{ \displaystyle \int \!\!\! \text{\footnotesize{$\frac{d^2 k}{(2\pi)^2}$}}~}
+%\newcommand{\intk}{ \displaystyle \int \!\!\!
+\text{\footnotesize{$\frac{d^2 k}{(2\pi)^2}$}}~}
 \newcommand{\oa}{\hat{a}}
 \newcommand{\opsi}{\hat{\psi}}
 \newcommand{\bvec}[1]{\boldsymbol{#1}}
 \newcommand{\lp}{{\scriptstyle _{LP}}}
+\newcommand{\bog}{{\scriptstyle _{Bog}}}
 \newcommand{\up}{{\scriptstyle _{UP}}}
 \newcommand{\hc}{\text{{\fontfamily{lmr}\selectfont H.c.}}}
 \newcommand{\sts}{{\scriptstyle ^{ss}_{LP}}}
+\newcommand{\lpsuper}[1]{{\scriptstyle ^{#1}_{LP}}}
+\newcommand{\bogsuper}[1]{{\scriptstyle ^{#1}_{Bog}}}
 \DeclareMathOperator{\tr}{Tr}
 \newcommand{\trcurl}[1]{\tr \left[ #1 \right]}
 \newcommand{\lind}[1]{\mathcal{L}[#1]}
