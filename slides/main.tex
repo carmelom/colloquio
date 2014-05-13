@@ -50,7 +50,7 @@
 %   \begin{columns}
 %
 %   \begin{column}{.6\textwidth}
-%     \includegraphics[width=\columnwidth]{files/QW_color.png}
+%     \includegraphics[width=\columnwidth]{pics/QW_color.png}
 %   \end{column}
 % %   \begin{column}{.4\textwidth}
 %     Le cavità bidimensionali di semiconduttore si rivelano uno strumento potente per studiare la fisica dei fluidi quantistici.
@@ -73,7 +73,7 @@
 % \hfill
 %   \begin{column}{.5\textwidth}
 %   \begin{figure}
-%     \includegraphics[width=\columnwidth]{files/QW.jpg}
+%     \includegraphics[width=\columnwidth]{pics/QW.jpg}
 %   \end{figure}
 %     \end{column}
 %   \end{columns}
@@ -86,7 +86,7 @@
 \begin{frame}{Cavità 2D}
 
   \begin{figure}
-     \fbox{\includegraphics[width=.7\textwidth]{files/QW_field.png}}
+     \fbox{\includegraphics[width=.7\textwidth]{pics/QW_field.png}}
     \end{figure}
 
     Massa del fotone dipendente dallo stato trasverso eccitato
@@ -102,7 +102,7 @@
      \begin{column}{.6\textwidth}
       \begin{figure}
        \fbox{
-       \includegraphics[width=.7\columnwidth]{files/Photon_dispersion.pdf}}
+       \includegraphics[width=.7\columnwidth]{pics/Photon_dispersion.pdf}}
       \end{figure}
 
      \end{column}
@@ -127,7 +127,7 @@
   &&
  \end{flalign*}
   \begin{figure}
-  \includegraphics[width=\textwidth]{files/QW.jpg}
+  \includegraphics[width=\textwidth]{pics/QW.jpg}
  \end{figure}
    \end{frame}
 
@@ -136,7 +136,7 @@
 
 
   Gradi di libertà sul piano $xy$
-  \begin{itemize}[<+->]
+  \begin{itemize}
     \item { fotoni
    \begin{flalign*}
    \ham_{cav} = \intk \hbar \omega_C (k) \ \oa_C^\dagger \oa_C  &&
@@ -148,8 +148,8 @@
  \end{flalign*}
    }
   \end{itemize}
-    \onslide<\thebeamerpauses>{
-  \transdissolve<\thebeamerpauses>
+%     \onslide<\thebeamerpauses>{
+%   \transdissolve<\thebeamerpauses>
  \begin{equation*}
   \boxed{
    \ham_{free} = \hbar \displaystyle \intk
@@ -157,7 +157,7 @@
       \begin{pmatrix} \omega_C & \Omega_R \\ \Omega_R & \omega_X \end{pmatrix}\,\begin{pmatrix}\oa_C \\ \oa_X \end{pmatrix}
       }
   \end{equation*}
-  }
+%  }
 \end{frame}
 
 \begin{frame}{Polaritoni liberi}
@@ -197,7 +197,7 @@
   \hfill
   \begin{column}{.55\textwidth}
    \begin{figure}[h]
-    \includegraphics[scale=.2]{files/polariton_dispersion.png}
+    \includegraphics[scale=.2]{pics/polariton_dispersion.png}
    \end{figure}
 
   \end{column}
@@ -267,7 +267,7 @@
   {.45\textwidth}
     \begin{figure}[t]
     \flushleft
-     \includegraphics[scale=.18]{files/incoherent.png}
+     \includegraphics[scale=.18]{pics/incoherent.png}
     \end{figure}
 
  \end{column}
@@ -298,15 +298,15 @@
 
 \begin{frame}{Pompaggio laser}
 
-\vspace{-1cm}
+\vspace{-.4cm}
 {\footnotesize
 \begin{columns}
 \hskip10pt
 \begin{column}{.4\textwidth}
 
 Se il pump è accordato vicino al fondo della branca LP
-\( \big(|\omega_p - \omega\lp| \ll \omega\up - \omega\lp \big) \)
-la branca superiore è molto poco eccitata.\\
+%\( \big(|\omega_p - \omega\lp| \ll \omega\up - \omega\lp \big) \)
+e l'ampiezza di interazione tra polaritoni è piccola rispetto allo splitting, la branca superiore è molto poco eccitata.\\
 La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
 \begin{flalign*}
   &
@@ -322,7 +322,7 @@ La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
    \end{column}
     \begin{column}{.6\textwidth}
       \begin{figure}
-       \includegraphics[scale=.25]{files/LP_pump.png}
+       \includegraphics[scale=.25]{pics/LP_pump.png}
       \end{figure}
   \end{column}
  \end{columns}
@@ -337,41 +337,47 @@ La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
 
 
 \begin{frame}{Dissipazione}
-MASTER EQUATION!!!! \alert{SUPER POWWA}!!!111!!!ONE11!
+Dovuta all'emissione attraverso gli specchi (trasmittività $\neq 0$)\\
+smorzamento radiativo descritto con una master equation
 {\Large
 \begin{equation*}
 i\hbar \partial_t\ \rho = [H,\rho] + i\hbar \lind \rho
 \end{equation*}
 }
-dove l'operatore di Lindblad è solo quello radiativo:
-\begin{equation*}
-\lind \rho = \intk \frac{\gamma_{{\scriptscriptstyle rad}}}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right )
-\end{equation*}
+con operatore di Lindblad 
+\begin{flalign*}
+\lind \rho = \intk \frac{\gamma_{{\scriptscriptstyle rad}}}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right ) &&
+\end{flalign*}
+$\Rightarrow$ Ha l'effetto di inserire nell'equazione di Heisemberg per $\opsi_C$ un termine di smorzamento:
+\[
+ i \partial_t\, \opsi_C = \dots -i\frac{\gamma_{{\scriptscriptstyle rad}}}{2} \opsi_C
+\]
 
-\begin{figure}
-       \includegraphics[scale=.3]{files/Panda.jpg}
-       \caption{\footnotesize Qui ci rimetto il panda, che almeno lui mi fa compagnia}
-      \end{figure}
- \end{frame}
+% \begin{figure}
+%        \includegraphics[scale=.3]{pics/Panda.jpg}
+%        \caption{\footnotesize Qui ci rimetto il panda, che almeno lui mi fa compagnia}
+%       \end{figure}
+
+\end{frame}
 
 
 \section{Teoria di campo medio}
 
-\begin{frame}{ddGPE}
-Riga senza senso
-\[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp
-\]
+\begin{frame}{Driven Dissipative GPE}
+Mean Field: $\displaystyle \qquad\opsi\lp \longmapsto \left<\opsi\lp\right> \equiv \psi\lp$
+% \[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp
+% \]
 
 %{\centering
-Approx: \begin{flalign*}
-            \begin{cases}
+\vspace{5pt}{\footnotesize La sostituzione è esatta per i termini lineari, approssimata per l'interazione:}
+\begin{equation*}
+  \begin{cases}
              \left< \opsi^\dagger \opsi\, \opsi \right> \approx |\psi|^2 \psi \\
              \omega\lp (k) \approx {\omega\lp}^0 + \displaystyle\frac{\hbar k^2}{2m\lp} \\
            \end{cases}
-           &&
-         \end{flalign*}
+\end{equation*}
 
-
+            
 % ddGPE
 \ovalbox{
 \begin{minipage}{\textwidth}
@@ -409,12 +415,12 @@ Soluzione stazionaria: \( \psi\lpsuper{0}(r,t) = \psi\sts \ e^{ik_pr - i\omega_p
 
 La stabilità delle soluzioni si valuta linearizzando attorno alla soluzione $\psi\lpsuper{0}$, e dipende dall'intensità del laser di pump e dal detuning \(\Delta \omega_p = \omega_p - \omega\lp(k_p)\):
 % \begin{figure}
-% \includegraphics[width=\textwidth]{files/Shapevspump-and-Spectra.png}
+% \includegraphics[width=\textwidth]{pics/Shapevspump-and-Spectra.png}
 % \end{figure}
 \begin{columns}[t]
  \begin{column}{.5\textwidth}
   \begin{figure}
-   \includegraphics[width=\columnwidth]{files/Shapevspump.png}
+   \includegraphics[width=\columnwidth]{pics/Shapevspump.png}
    \smallcaption{\(\Delta\omega_p <0\) (top) vs \(\Delta\omega_p >0\) (bottom)}
   \end{figure}
 
@@ -422,7 +428,7 @@ La stabilità delle soluzioni si valuta linearizzando attorno alla soluzione $\p
 
  \begin{column}{.5\textwidth}
   \begin{figure}
-   \includegraphics[width=\columnwidth]{files/Spectra.png}
+   \includegraphics[width=\columnwidth]{pics/Spectra.png}
    \smallcaption{Spettro di Bogoliubov nei due casi}
   \end{figure}
  \end{column}
@@ -436,13 +442,13 @@ La stabilità delle soluzioni si valuta linearizzando attorno alla soluzione $\p
 
 \begin{frame}{Spettro delle eccitazioni}
 Soluzione stazionaria: \( \psi\lp(r,t) = \left(\psi\sts + \delta\psi (r,t) \right)e^{ik_pr - i\omega_p t} \)\\
-Al I ordine in \(\delta\psi\), lo spettro delle eccitazioni (modi di Bogoliubov) si ricava con un procedimento analogo al caso di equilibrio
+Al I ordine in \(\delta\psi\), lo spettro delle eccitazioni (modi di Bogoliubov) si ricava con un procedimento analogo al caso di un gas di bosoni all'equilibrio
 {\footnotesize
 \begin{flalign*}
  \bvec{\delta \psi} = {\big( \delta\psi \; , \; {\delta\psi}^* \big)}^T \\
  \\
- i \partial_t\, \bvec{\delta\psi} = \mathcal{L}\bog \cdot \bvec{\delta\psi} + \bvec{f_{ext}}
-\end{flalign*}
+ i \partial_t\, \bvec{\delta\psi} = \mathcal{L}\bog \cdot \bvec{\delta\psi}
+ \end{flalign*}
 
 
 }
@@ -457,7 +463,7 @@ Al I ordine in \(\delta\psi\), lo spettro delle eccitazioni (modi di Bogoliubov)
 % }
 
 \[
- \omega\lpsuper{\pm} = \omega_p + \delta k \cdot v_p -i\frac{\gamma\lp}{2} \pm \sqrt{\left(2 g\lp |\psi\sts|^2 + \eta_{\delta k} - \Delta_p\right)\left(\eta_{\delta k} - \Delta_p\right)}
+ \omega\bogsuper{\pm} = \omega_p + \delta k \cdot v_p -i\frac{\gamma\lp}{2} \pm \sqrt{\left(2 g\lp |\psi\sts|^2 + \eta_{\delta k} - \Delta_p\right)\left(\eta_{\delta k} - \Delta_p\right)}
 \]
 {\footnotesize
 dove i parametri di controllo entrano in
@@ -483,29 +489,41 @@ dove i parametri di controllo entrano in
 \subsection{Criterio di Landau}
 \subsection{Verifica sperimentale}
 
+\begin{frame}{Video}
+\movie[borderwidth=.6pt,
+      height=.5\textheight,
+      width=.5\textwidth,
+      ]%externalviewer]
+      {}{movies/cherexp.mp4}
+      \\
+Hello
+% \begin{figure}
+%  \includemedia[
+% activate=pageopen,
+% deactivate=pageclose,
+% width=200pt, height=150pt,
+% addresource=weyllaw.mp4,
+% flashvars={
+% src=weyllaw.mp4
+% &loop=false
+% &autoPlay=true
+% }
+% ]{movies/cherexp.mp4}
+% \end{figure}
+
+
+\end{frame}
+
+
+
 % Placing a * after \section means it will not show in the
 % outline or table of contents.
+
+
 \section*{Summary}
 
 \begin{frame}{Summary}
-  \begin{itemize}
-  \item
-    Colloquio \alert{superfigo}.
-  \item
-    \alert{Fazio in vacanza} senza di noi.
-  \item
-    Perhaps a \alert{third message}, but not more than that.
-  \end{itemize}
-    \begin{itemize}
-  \item
-    Outlook
-    \begin{itemize}
-    \item
-      Something you haven't solved.
-    \item
-      Something else you haven't solved.
-    \end{itemize}
-  \end{itemize}
+  Ciao
 \end{frame}
 
 

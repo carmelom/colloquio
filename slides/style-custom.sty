@@ -11,15 +11,16 @@
 \usepackage{subfig}
 \usepackage{caption}
 
+\usepackage{multimedia}
+%\usepackage{media9}
+
 \setbeamercovered{transparent}
 
 %\usepackage{extsizes}
-% There are many different themes available for Beamer. A
-comprehensive
+% There are many different themes available for Beamer. A comprehensive
 % list with examples is given here:
 % http://deic.uab.es/~iblanes/beamer_gallery/index_by_theme.html
-% You can uncomment the themes below if you would like to use
-a different
+% You can uncomment the themes below if you would like to  use a different
 % one:
 %\usetheme{AnnArbor}
 %\usetheme{Antibes}
@@ -56,7 +57,7 @@ a different
 %%background
 \ifnum\thepage=1{
 
-\pgfdeclareimage[width=\paperwidth]{bakimg}{files/Panda.jpg}
+\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/Panda.jpg}
 \setbeamertemplate{background}
 {
         \begin{tikzpicture}
@@ -85,8 +86,6 @@ a different
 \newcommand{\intk}{ \bigintsss \!\!\! \text{\small{$\frac{d^2
 k}{(2\pi)^2}$}}~}
 \newcommand{\intr}{ \bigintsss \!\!\! \text{\small{$d^2 r$}}~}
-%\newcommand{\intk}{ \displaystyle \int \!\!\!
-\text{\footnotesize{$\frac{d^2 k}{(2\pi)^2}$}}~}
 \newcommand{\oa}{\hat{a}}
 \newcommand{\opsi}{\hat{\psi}}
 \newcommand{\bvec}[1]{\boldsymbol{#1}}
