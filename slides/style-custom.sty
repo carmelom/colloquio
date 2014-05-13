@@ -49,15 +49,21 @@
 %\usetheme{Singapore}
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
+%\usetheme{Dresden}
 
-%\usecolortheme{crane}
-%\usepackage{beamerthemesidebar}
-
+% \usecolortheme{rose}
+% 
+% \useoutertheme[subsection=false]{smoothbars}
+ \useinnertheme[shadow=true]{rounded}
+% 
+% %\usecolortheme{orchid}
+% %\usecolortheme{dove}
+% \usecolortheme{seahorse}
 
 %%background
 \ifnum\thepage=1{
 
-\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/Panda.jpg}
+\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/superfluidity2.jpg}
 \setbeamertemplate{background}
 {
         \begin{tikzpicture}
@@ -94,8 +100,8 @@ k}{(2\pi)^2}$}}~}
 \newcommand{\up}{{\scriptstyle _{UP}}}
 \newcommand{\hc}{\text{{\fontfamily{lmr}\selectfont H.c.}}}
 \newcommand{\sts}{{\scriptstyle ^{ss}_{LP}}}
-\newcommand{\lpsuper}[1]{{\scriptstyle ^{#1}_{LP}}}
-\newcommand{\bogsuper}[1]{{\scriptstyle ^{#1}_{Bog}}}
+\newcommand{\lpsuper}[1]{^{#1}_{\scriptstyle {LP}}}
+\newcommand{\bogsuper}[1]{^{#1}_{\scriptstyle {Bog}}}
 \DeclareMathOperator{\tr}{Tr}
 \newcommand{\trcurl}[1]{\tr \left[ #1 \right]}
 \newcommand{\lind}[1]{\mathcal{L}[#1]}
