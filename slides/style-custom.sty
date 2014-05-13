@@ -10,9 +10,11 @@
 \usepackage{fancybox}
 \usepackage{subfig}
 \usepackage{caption}
+%\usepackage{geometry}
 
 \usepackage{multimedia}
 %\usepackage{media9}
+
 
 \setbeamercovered{transparent}
 
@@ -54,24 +56,24 @@
 % \usecolortheme{rose}
 % 
 % \useoutertheme[subsection=false]{smoothbars}
- \useinnertheme[shadow=true]{rounded}
+%\useinnertheme[shadow=true]{rounded}
 % 
 % %\usecolortheme{orchid}
 % %\usecolortheme{dove}
 % \usecolortheme{seahorse}
 
+
 %%background
 \ifnum\thepage=1{
 
-\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/superfluidity2.jpg}
+\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/superfluidity2.5.jpg}
 \setbeamertemplate{background}
 {
         \begin{tikzpicture}
         
         \ifnum \thepage=1
                 {
-                \useasboundingbox (0,0) rectangle (\the\paperwidth,
-\the\paperheight) ;
+                \useasboundingbox (0,0) rectangle (\the\paperwidth,\the\paperheight) ;
                 %\pgftext[at=\pgfpoint{\the\paperwidth/10}{.5cm},left,base]{\pgfuseimage{bakimg}}
 ;
                 \pgftext[at=\pgfpoint{0}{0},left,base]{\pgfuseimage{bakimg}}
@@ -90,8 +92,8 @@
 %%definitions
 \newcommand{\ham}{\mathcal{H}}
 \newcommand{\intk}{ \bigintsss \!\!\! \text{\small{$\frac{d^2
-k}{(2\pi)^2}$}}~}
-\newcommand{\intr}{ \bigintsss \!\!\! \text{\small{$d^2 r$}}~}
+k}{(2\pi)^2}$}}\ }
+\newcommand{\intr}{ \bigintsss \!\!\! \text{\small{$d^2 r$}}\ }
 \newcommand{\oa}{\hat{a}}
 \newcommand{\opsi}{\hat{\psi}}
 \newcommand{\bvec}[1]{\boldsymbol{#1}}
@@ -100,8 +102,8 @@ k}{(2\pi)^2}$}}~}
 \newcommand{\up}{{\scriptstyle _{UP}}}
 \newcommand{\hc}{\text{{\fontfamily{lmr}\selectfont H.c.}}}
 \newcommand{\sts}{{\scriptstyle ^{ss}_{LP}}}
-\newcommand{\lpsuper}[1]{^{#1}_{\scriptstyle {LP}}}
-\newcommand{\bogsuper}[1]{^{#1}_{\scriptstyle {Bog}}}
+\newcommand{\lpsuper}[1]{{\scriptstyle^{#1}_{ LP}}}
+\newcommand{\bogsuper}[1]{^{#1}_{\scriptstyle Bog}}
 \DeclareMathOperator{\tr}{Tr}
 \newcommand{\trcurl}[1]{\tr \left[ #1 \right]}
 \newcommand{\lind}[1]{\mathcal{L}[#1]}

@@ -1,4 +1,4 @@
-\subsection{Dinamica dei polaritoni}
+
 % %  \begin{frame}{Cavità 2D}{fuffa}
 %  \transwipe[direction=270]
 %  \small
@@ -71,7 +71,7 @@
 \end{frame}
 
  \begin{frame}{Quantum Wells}
- \alert{DA SISTEMARE}
+ \alert{DA UNIRE A QUELLA SOPRA}
 
  Buche/elettroni confinati lungo z \( \longrightarrow \) Eccitoni\\
  \vspace{10pt}
@@ -88,43 +88,32 @@
  \end{figure}
    \end{frame}
 
+\subsection{Dinamica dei polaritoni}
  
-\begin{frame}{Dinamica}
+\begin{frame}{Polaritoni}
 
 
   Gradi di libertà sul piano $xy$
   \begin{itemize}
-    \item { fotoni
-   \begin{flalign*}
-   \ham_{cav} = \intk \hbar \omega_C (k) \ \oa_C^\dagger \oa_C  &&
-  \end{flalign*}
-  }
-      \item { eccitoni, con interaz. di dipolo (RWA)
- \begin{flalign*}
-    \ham_{exc} = \intk \hbar \omega_X (k) \ \oa_X^\dagger \oa_X ~ + ~\hbar \Omega_R \left(\oa_C^\dagger \oa_X + \oa_X^\dagger \oa_C\right) &&
- \end{flalign*}
-   }
+    \item fotoni della cavità
+    \item eccitoni, con interaz. di dipolo \(\big(\Omega_R \ll \omega_C, \omega_X \rightarrow \text{RWA}\big)\)
   \end{itemize}
-%     \onslide<\thebeamerpauses>{
-%   \transdissolve<\thebeamerpauses>
+
+  
  \begin{equation*}
-  \boxed{
-   \ham_{free} = \hbar \displaystyle \intk
+ \boxed{
+     \ham_{free} = \hbar \displaystyle \intk
       \begin{pmatrix} \oa_C^\dagger & \oa_X^\dagger \end{pmatrix}\,
       \begin{pmatrix} \omega_C & \Omega_R \\ \Omega_R & \omega_X \end{pmatrix}\,\begin{pmatrix}\oa_C \\ \oa_X \end{pmatrix}
-      }
-  \end{equation*}
-%  }
-\end{frame}
+    }  
+   \end{equation*}
 
-\begin{frame}{Polaritoni liberi}
-
-\begin{equation*}
-%\begin{align}
- \ham_{free} = \hbar \intk \omega_{LP} (k) \oa_{LP}^\dagger \oa_{LP} ~ + ~ \omega_{UP} (k) \oa_{UP}^\dagger \oa_{UP}
-%\end{align}
-\end{equation*}
-
+% \begin{equation*}
+% %\begin{align}
+%  \ham_{free} = \hbar \intk \omega_{LP} (k) \oa_{LP}^\dagger \oa_{LP} ~ + ~ \omega_{UP} (k) \oa_{UP}^\dagger \oa_{UP}
+% %\end{align}
+% \end{equation*}
+\vspace{-15pt}
 \begin{minipage}{\textwidth}
 \begin{columns}
 \hskip.4cm
@@ -140,7 +129,7 @@
 
 
    Coefficienti di Hopfield\\
-   \( C_j (k) \approx X_j (k) \approx 1/2 \quad \text{@low }k\)
+   {\scriptsize \(\big( C_j (k) \approx X_j (k) \approx 1/2 \quad \text{@low }k\big)\)}
 
    \begin{equation*}
     \begin{align}
@@ -167,8 +156,6 @@
 
 \subsection{Interazioni}
 
-% You can reveal the parts of a slide one at a time
-% with the \pause command:
 \begin{frame}{Interazioni}
   %\transwipe[direction=270]
   Di carattere fotonico ed elettronico\\
@@ -252,53 +239,12 @@
  \end{equation*}
 \end{frame}
 
-
-\begin{frame}{Pompaggio laser}
-
-\vspace{-.4cm}
-{\footnotesize
-\begin{columns}
-\hskip10pt
-\begin{column}{.4\textwidth}
-
-Se l'ampiezza di interazione tra polaritoni è piccola rispetto allo splitting
-%\( \big(|\omega_p - \omega\lp| \ll \omega\up - \omega\lp \big) \)
-e il pump è accordato vicino al fondo della branca LP, la branca superiore è molto poco eccitata.\\
-La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
-\begin{flalign*}
-  &
-    \begin{cases}
-        \opsi\up \approx 0 \\
-        \opsi_C \approx C\lp \ \opsi\lp \\
-        \opsi_X \approx X\lp \ \opsi\lp
-     \end{cases}
-  \\
-  &\qquad\quad\Downarrow \\
-  &\opsi\lp \approx C\lpsuper{*} \ \opsi_C + X\lpsuper{*} \ \opsi_X
-   \end{flalign*}
-   \end{column}
-    \begin{column}{.6\textwidth}
-      \begin{figure}
-       \includegraphics[scale=.25]{pics/LP_pump.png}
-      \end{figure}
-  \end{column}
- \end{columns}
-}
-\normalsize
-\begin{align*}
-  \ham = \ \hbar \intr & \opsi\lpsuper{\dagger} \ \big[ \omega\lp(-i\nabla) \big]\ \opsi\lp + \frac{g\lp}{2} \opsi\lpsuper{\dagger}  \opsi\lpsuper{\dagger}  \opsi\lp  \opsi\lp \\
-        &+ \left( i F_p e^{ik_p r -i\omega_p t} \ \opsi\lpsuper{\dagger} + \hc \right)
-\end{align*}
-
-\end{frame}
-
-
 \begin{frame}{Dissipazione}
 Dovuta all'emissione attraverso gli specchi (trasmittività $\neq 0$)\\
 smorzamento radiativo descritto con una master equation
 %{\Large
 \begin{equation*}
-i\hbar \partial_t\ \rho = [H,\rho] + i\hbar \lind \rho
+i\hbar \partial_t\ \rho = [\ham,\rho] + i\hbar \lind \rho
 \end{equation*}
 %}
 con operatore di Lindblad 
@@ -316,3 +262,5 @@ $\Rightarrow$ Ha l'effetto di inserire nell'equazione di Heisemberg per $\opsi_C
 %       \end{figure}
 
 \end{frame}
+
+

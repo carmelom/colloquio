@@ -30,9 +30,16 @@
 
 \begin{document}
 
-\begin{frame}
+
+%\beamertemplatenavigationsymbolsempty
+
+\begin{frame}[plain]
+\advance\textwidth2cm
+\hsize\textwidth
+\columnwidth\textwidth
   \titlepage
 \end{frame}
+
 
 \begin{frame}{Outline}
   \tableofcontents[pausesections]
@@ -42,12 +49,54 @@
 % Section and subsections will appear in the presentation overview
 % and table of contents.
 \section{Cavità di semiconduttori}
-
-\input{sez-dinamica1.tex}
+% eventualmente da accorciare, ma mi sa ormai di no.
+\input{sez-dinamica2.tex}
 
 
 \section{Teoria di campo medio}
 
+\begin{frame}{Dinamica dei LP}
+
+\vspace{-.4cm}
+\footnotesize
+
+\begin{columns}
+\hskip10pt
+\begin{column}{.4\textwidth}
+
+Se l'ampiezza di interazione tra polaritoni è piccola rispetto allo splitting
+%\( \big(|\omega_p - \omega\lp| \ll \omega\up - \omega\lp \big) \)
+e il pump è accordato vicino al fondo della branca LP, la branca superiore è molto poco eccitata.\\
+La trascuriamo, assieme a tutti i suoi termini nell'hamiltoniana:
+\begin{flalign*}
+  &
+    \begin{cases}
+        \opsi\up \approx 0 \\
+        \opsi_C \approx C\lp \ \opsi\lp \\
+        \opsi_X \approx X\lp \ \opsi\lp
+     \end{cases}
+  \\
+  &\qquad\quad\Downarrow \\
+  &\opsi\lp \approx C\lpsuper{*} \ \opsi_C + X\lpsuper{*} \ \opsi_X
+   \end{flalign*}
+   \end{column}
+    \begin{column}{.6\textwidth}
+      \begin{figure}
+       \includegraphics[scale=.25]{pics/LP_pump.png}
+      \end{figure}
+  \end{column}
+ \end{columns}
+
+\normalsize
+\begin{align*}
+  \ham = \ \hbar \intr & \opsi\lpsuper{\dagger} \, \big[ \omega\lp(-i\nabla) \big]\, \opsi\lpsuper{} + \frac{g\lp}{2} \opsi\lpsuper{\dagger}  \opsi\lpsuper{\dagger} \displaystyle\opsi\lpsuper{}  \opsi\lpsuper{} \\
+        &+ \left( i F_p e^{ik_p r -i\omega_p t} \ \opsi\lpsuper{\dagger} + \hc \right)
+\end{align*}
+
+\end{frame}
+
+
+\subsection{Gross-Pitaevskii}
 \begin{frame}{Driven Dissipative GPE}
 Mean Field: $\displaystyle \qquad\opsi\lp \longmapsto \left<\opsi\lp\right> \equiv \psi\lp$
 % \[ i\hbar \partial_t \trcurl{\rho \opsi\lp} \approx i\hbar \partial_t \,\psi\lp
@@ -165,11 +214,32 @@ dove i parametri di controllo entrano in
 
 
 \section{Superfluidità}
+\begin{frame}{Perturbazione locale}
+\begin{columns}
+	\begin{column}{.5\textwidth}
+	  \[
+	\mathcal{V} = \intr \sum_{j=X,C} V_j(r) \opsi_j^\dagger \opsi_j
+	  \]
+	\end{column}
+	
+	\begin{column}{.5\textwidth}
+	    \begin{itemize}
+	      \item stress meccanico
+	      \item variazione $\ell_z$
+	      \item drogaggio
+	      \item difetti della cavità
+	    \end{itemize}
+
+	\end{column}
+\end{columns}
+\vspace{10pt}
+Potenziale \underline{statico} $\Rightarrow$ eccita solo i modi ad energia $\omega_p$ \dots
+
+
+ \end{frame}
 
 \subsection{Resonant Raileigh Scattering}
 
-\begin{frame}{Perturbazione}
- \end{frame}
 
 \subsection{Criterio di Landau}
 \subsection{Verifica sperimentale}

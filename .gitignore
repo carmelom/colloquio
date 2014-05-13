@@ -1,6 +1,18 @@
+##Schifezze che non ho perso tempo ad installare
+slides/bigints.sty
+slides/bigints-doc/
+slides/main.pdf
+slides/multiple-span.txt
+slides/wrapfig-doc.pdf
+slides/wrapfig-doc.tex
+slides/wrapfig.sty
+temp/
+
+
 ## Backup files
 *~
 *.backup
+*.tex.backup
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
