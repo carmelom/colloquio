@@ -10,6 +10,8 @@
 \usepackage{fancybox}
 \usepackage{subfig}
 \usepackage{caption}
+\captionsetup[figure]{labelformat=empty}%
+\newcommand{\mycaption}[1]{\\{\footnotesize #1}}
 %\usepackage{geometry}
 
 \usepackage{multimedia}
@@ -66,7 +68,7 @@
 %%background
 \ifnum\thepage=1{
 
-\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/superfluidity2.5.jpg}
+\pgfdeclareimage[width=\paperwidth]{bakimg}{pics/background.jpg}
 \setbeamertemplate{background}
 {
         \begin{tikzpicture}
