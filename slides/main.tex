@@ -42,6 +42,7 @@
 
 
 \begin{frame}{Outline}
+\transwipe[direction=270]
   \tableofcontents[pausesections]
   % You might wish to add the option [pausesections]
 \end{frame}
@@ -216,9 +217,7 @@ dove i parametri di controllo entrano in
   \end{column}
 \end{columns}
 
-
-
- \end{frame}
+\end{frame}
 
 
 \section{Superfluidità}
@@ -277,8 +276,8 @@ Potenziale \underline{statico} $\Rightarrow$ eccita solo i modi ad energia $\ome
 
  \end{frame}
 
-\subsection{Resonant Raileigh Scattering}
-\begin{frame}{Resonant Raileigh Scattering}
+\subsection{Resonant Rayleigh Scattering}
+\begin{frame}{Resonant Rayleigh Scattering}
 Low/off-resonance excitation: interazioni $LP$ trascurabili\\
 Scattering elastico dei singoli polaritoni
 \begin{columns}[t]
@@ -300,133 +299,11 @@ Scattering elastico dei singoli polaritoni
 %%%-----------alternative
 \ifnum\videovariable=1
 {
-\subsection{Transizione a superfluido}
+\input{sections/sez-regimi-video.tex} 
 
-\begin{frame}{Transizione a superfluido}
-  Interazioni $\Rightarrow$ effetti collettivi del sistema\\
-  Regime subsonico: superfluidità
-  \vspace{10pt}
-  \begin{columns}
-  
-    \begin{column}{.5\textwidth}
-     \fbox{
-        \movie[borderwidth=.6pt,
-      height=.75\textwidth,
-      width=\textwidth,
-      externalviewer,	
-      poster]
-      {}{movies/ToSuper-exp.mov}
-      }
-    \end{column}
-    \begin{column}{.5\textwidth}
-    \begin{minipage}[h]{\columnwidth}
-      \begin{figure}[h]
-          \includegraphics[width=.8\columnwidth]{pics/scattering-super-dispersion.png}
-      \end{figure}
-      \begin{figure}[h]
-        \includegraphics[width=.8\columnwidth]{pics/scattering-super-normalized-back.png}
-       \end{figure}
-    \end{minipage}
-   \end{column}
-  \end{columns}
-Criterio di Landau
-\begin{flalign*}
-       \displaystyle v_p < c_s \equiv \sqrt{\frac{\hbar g\lp |\psi\sts|^2}{m\lp}}&&
-\end{flalign*}
-
-\end{frame}
-\subsection{Regime \v{C}erenkov}
-\begin{frame}{Regime \v{C}erenkov}
-  Interazioni $\Rightarrow$ effetti collettivi del sistema\\
-  Regime supersonico: emissione \v{C}erenkov
-  \vspace{10pt}
-  \begin{columns}
-  
-    \begin{column}{.5\textwidth}
-     \fbox{
-        \movie[borderwidth=.6pt,
-      height=.75\textwidth,
-      width=\textwidth,
-      externalviewer,	
-      poster]
-      {}{movies/ToCher-exp.mov}
-      }
-    \end{column}
-    \begin{column}{.5\textwidth}
-    \begin{minipage}[h]{\columnwidth}
-      \begin{figure}[h]
-          \includegraphics[width=.8\columnwidth]{pics/scattering-cher-dispersion.png}
-      \end{figure}
-      \begin{figure}[h]
-        \includegraphics[width=.8\columnwidth]{pics/scattering-super-normalized-back.png}
-       \end{figure}
-    \end{minipage}
-   \end{column}
-  \end{columns}
-Criterio di Landau
-\begin{flalign*}
-       \displaystyle v_p > c_s \equiv \sqrt{\frac{\hbar g\lp |\psi\sts|^2}{m\lp}}&&
-\end{flalign*}
-
-\end{frame}
 }
 \else{
-\subsection{Regime superfluido}% foto
-\begin{frame}{Regime superfluido}
-  Interazioni $\Rightarrow$ effetti collettivi del sistema\\
-  Regime subsonico: superfluidità\\
-  
-  \begin{columns}[t]
-  
-    \begin{column}{.7\textwidth}
-     \begin{figure}
-  \centering
-    \includegraphics[width=\columnwidth]{pics/scattering-super-all.png}
-  \end{figure}
-  \hspace{-10pt}
-    \end{column}
-    \begin{column}{.3\textwidth}
-    
-    \begin{figure}
-          \includegraphics[width=\columnwidth]{pics/scattering-super-dispersion.png}
-      \end{figure}
-      Criterio di Landau
-\begin{flalign*}
-       \displaystyle v_p < c_s \equiv \sqrt{\frac{\hbar g\lp |\psi\sts|^2}{m\lp}}&&
-\end{flalign*}
-    \end{column}
-  \end{columns}
-
-\end{frame}
-
-\subsection{Regime \v{C}erenkov}% foto
-
-\begin{frame}{Regime \v{C}erenkov}
-  Interazioni $\Rightarrow$ effetti collettivi del sistema\\
- Regime supersonico: emissione \v{C}erenkov\\
-  
-  \begin{columns}[t]
-  
-    \begin{column}{.7\textwidth}
-     \begin{figure}
-  \centering
-    \includegraphics[width=\columnwidth]{pics/scattering-cher-all.png}
-  \end{figure}
-  \hspace{-10pt}
-    \end{column}
-    \begin{column}{.3\textwidth}
-    
-    \begin{figure}
-          \includegraphics[width=\columnwidth]{pics/scattering-cher-dispersion.png}
-      \end{figure}
-      Criterio di Landau
-\begin{flalign*}
-       \displaystyle v_p > c_s \equiv \sqrt{\frac{\hbar g\lp |\psi\sts|^2}{m\lp}}&&
-\end{flalign*}
-    \end{column}
-  \end{columns}
-
-\end{frame}
+\input{sections/sez-regimi-foto.tex}
 }
 \fi
 

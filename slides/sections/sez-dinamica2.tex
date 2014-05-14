@@ -1,24 +1,29 @@
 
 \begin{frame}{Cavità 2D}
 
-  \begin{figure}
-     \fbox{\includegraphics[height=.4\textheight]{pics/QW_field.png}}
-    \end{figure}
+\begin{figure}
 
-    Massa del fotone dipendente dallo stato trasverso eccitato
-
+     \fbox{\includegraphics[width=.7\textwidth]{pics/QW_field.png}}
+ \end{figure}
+ \vskip-10pt
     \begin{columns}
-     \begin{column}{.5\textwidth}
+     \begin{column}{.4\textwidth}
+    % \footnotesize
+      \begin{itemize}
+       \item $k_\parallel$ fissato dal laser
+       \item Massa effettiva $\propto q_z$ 
+      \end{itemize}
       \begin{align*}
         \omega_C(k) &= \frac{c}{n_0}\sqrt{{q_z}^2 + k^2} \\
-                &\simeq \omega_C^0 + \frac{\hbar k^2}{2m_C} &&
+             %   &\simeq \omega_C^0 + \frac{\hbar k^2}{2m_C} &&
         \end{align*}
      \end{column}
 
      \begin{column}{.6\textwidth}
+     
       \begin{figure}
-       \fbox{
-       \includegraphics[width=.7\columnwidth]{pics/Photon_dispersion.pdf}}
+       
+       \includegraphics[width=.9\columnwidth]{pics/Photon_dispersion_2.pdf}
       \end{figure}
 
      \end{column}
@@ -31,21 +36,35 @@
 \end{frame}
 
  \begin{frame}{Quantum Wells}
- \alert{DA UNIRE A QUELLA SOPRA}
-
- Buche/elettroni confinati lungo z \( \longrightarrow \) Eccitoni\\
- \vspace{10pt}
- Si comportano come bosoni\\
- Interagiscono con il campo laser nella cavità
-
- \begin{flalign*}
+  Buche/elettroni confinati lungo z \( \longrightarrow \) Eccitoni\\
+ \begin{figure}
+  \includegraphics[width=\textwidth]{pics/QW.jpg}
+ \end{figure}
+ \vskip-1.2cm
+ \begin{columns}
+     \begin{column}{.4\textwidth}
+     \footnotesize
+      Il confinamento si ottiene alternando strati di semiconduttore dal livello di conduzione e valenza opportuno
+      \begin{flalign*}
  \qquad &\omega_X(k) = \omega_X^0 + \frac{\hbar k^2}{2m_X} \\
   &V_{dip} \propto \vec d_X \cdot \vec E_{cav}
   &&
  \end{flalign*}
-  \begin{figure}
-  \includegraphics[width=\textwidth]{pics/QW.jpg}
- \end{figure}
+     \end{column}
+
+     \begin{column}{.6\textwidth}
+     
+      \begin{figure}
+       
+       \includegraphics[width=.9\columnwidth]{pics/QW_details.png}
+      \end{figure}
+
+     \end{column}
+
+
+    \end{columns}
+ 
+  
    \end{frame}
 
 \subsection{Dinamica dei polaritoni}
@@ -208,7 +227,7 @@ con operatore di Lindblad
 \begin{flalign*}
 \lind \rho = \intk \frac{\gamma_{{\scriptscriptstyle rad}}}{2} \left ( 2\oa_C\rho \oa_C^\dagger - \oa_C^\dagger \oa_C \rho - \rho \oa_C^\dagger \oa_C \right ) &&
 \end{flalign*}
-$\Rightarrow$ Ha l'effetto di inserire nell'equazione di Heisemberg per $\opsi_C$ un termine di smorzamento:
+$\Rightarrow$ Ha l'effetto di inserire nell'equazione di Heisenberg per $\opsi_C$ un termine di smorzamento:
 \[
  i \partial_t\, \opsi_C = \dots -i\frac{\gamma_{{\scriptscriptstyle rad}}}{2} \opsi_C
 \]
